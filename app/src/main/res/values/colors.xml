@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="primaryColor">#1E90FF</color>
+    <color name="backgroundDisplay">#FAFAFA</color>
+    <color name="grey">#E8858585</color>
+    <color name="blackgrey">#E85C5A5A</color>
+    <color name="green">#55C264</color>
     <color name="black">#FF000000</color>
+    <color name="yellow">#FFFF00</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

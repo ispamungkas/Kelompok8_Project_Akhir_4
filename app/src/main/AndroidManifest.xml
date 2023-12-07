@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,10 +16,24 @@
         android:theme="@style/Theme.Kelompok8_Project_Akhir_8"
         tools:targetApi="31">
         <activity
-            android:name="com.uknown.kelompok8_project_akhir_4.homepage.HomepageActivity"
+            android:name="com.uknown.kelompok8_project_akhir_4.homepage.orderpage.DetailOrderActivity"
             android:exported="false" />
         <activity
-            android:name="com.uknown.kelompok8_project_akhir_4.SplachScreen"
+            android:name="com.uknown.kelompok8_project_akhir_4.homepage.orderpage.ChooseBusActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.uknown.kelompok8_project_akhir_4.homepage.orderpage.SearchCityActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.uknown.kelompok8_project_akhir_4.homepage.orderpage.ChooseSeatActivity"
+            android:exported="false"
+            android:label="@string/title_activity_choice_seat"
+            android:theme="@style/Theme.Kelompok8_Project_Akhir_8" />
+        <activity
+            android:name="com.uknown.kelompok8_project_akhir_4.homepage.detail_tiket.DetailTicketActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.uknown.kelompok8_project_akhir_4.homepage.HomepageActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +41,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.uknown.kelompok8_project_akhir_4.SplachScreen"
+            android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
