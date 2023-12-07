@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/containerLocation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp">
+
+    <TextView
+        android:id="@+id/daerah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/try_pekanbaru"
+        style="@style/poppins14SemiBoldBlackGrey"/>
+
+    <TextView
+        android:id="@+id/terminal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/try_pekanbaru"
+        style="@style/poppins14RegularGrey"/>
+
+</LinearLayout>

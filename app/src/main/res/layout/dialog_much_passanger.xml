@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_white"
+    android:padding="30dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_how_much_passanger"
+        style="@style/poppins16SemiBoldBlack"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/older_than_2_years_old_should_buy_a_seat"
+        style="@style/poppins12SemiBoldGrey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp">
+        
+        <TextView
+            android:id="@+id/muchPassanger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_2"
+            style="@style/poppins40SemiBoldPrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/passanger"
+            android:layout_marginTop="-15dp"
+            style="@style/poppins16SemiBoldGrey"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:text="@string/_1"
+            style="@style/poppins20SemiBoldGrey"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderPassanger"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.60"
+            android:valueFrom="1"
+            android:valueTo="10"
+            app:trackColorActive="@color/primaryColor"
+            app:thumbColor="@color/primaryColor"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:text="@string/_10"
+            style="@style/poppins20SemiBoldGrey"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+        
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:background="@drawable/background_button_grey"
+            style="@style/poppins16SemiBoldPrimary"
+            android:elevation="0dp"
+            android:layout_marginEnd="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSelect"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="@string/select"
+            android:background="@drawable/background_button_primarycolor"
+            style="@style/poppins16SemiBoldWhite"
+            android:elevation="0dp"
+            android:layout_marginStart="10dp"/>
+        
+    </LinearLayout>
+</LinearLayout>

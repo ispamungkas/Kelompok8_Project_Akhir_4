@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundDisplay">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundDisplay"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/arrowBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:src="@drawable/icon_arrowback"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.50"
+                android:text="@string/choose_your_seat"
+                style="@style/poppins16SemiBoldBlack"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@id/appBar"
+       android:layout_above="@id/category">
+
+       <LinearLayout
+           android:id="@+id/llseat"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/appBar"
+           android:layout_marginLeft="35dp"
+           android:layout_marginTop="70dp"
+           android:layout_marginRight="35dp"
+           android:orientation="vertical"
+           android:gravity="center">
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:gravity="center_horizontal"
+               android:orientation="horizontal">
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat1"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:text="@string/_1"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat2"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="15dp"
+                   android:text="@string/_2"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat3"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="40dp"
+                   android:text="@string/_3"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat4"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="15dp"
+                   android:text="@string/_4"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="10dp"
+               android:gravity="center_horizontal"
+               android:orientation="horizontal">
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat5"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:text="5"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat6"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="15dp"
+                   android:text="6"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat7"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="40dp"
+                   android:text="7"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat8"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="15dp"
+                   android:text="8"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="10dp"
+               android:gravity="center_horizontal"
+               android:orientation="horizontal">
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat9"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:text="9"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat10"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="15dp"
+                   android:text="10"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat11"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="40dp"
+                   android:text="11"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat12"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="15dp"
+                   android:text="12"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="10dp"
+               android:gravity="center_horizontal"
+               android:orientation="horizontal">
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat13"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:text="13"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat14"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="15dp"
+                   android:text="14"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat15"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="40dp"
+                   android:text="15"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat16"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="15dp"
+                   android:text="16"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="10dp"
+               android:gravity="center_horizontal"
+               android:orientation="horizontal">
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat17"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:text="17"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat18"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="15dp"
+                   android:text="18"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat19"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="40dp"
+                   android:text="19"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat20"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="15dp"
+                   android:text="20"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="10dp"
+               android:gravity="center_horizontal"
+               android:orientation="horizontal">
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat21"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:text="21"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat22"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="15dp"
+                   android:text="22"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat23"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="40dp"
+                   android:text="23"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat24"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="15dp"
+                   android:text="20"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="10dp"
+               android:gravity="center_horizontal"
+               android:orientation="horizontal">
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat25"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:text="25"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat26"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="15dp"
+                   android:text="26"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat27"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="40dp"
+                   android:text="27"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat28"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="15dp"
+                   android:text="20"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="10dp"
+               android:layout_marginHorizontal="40dp"
+               android:gravity="end"
+               android:orientation="horizontal">
+
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat29"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="40dp"
+                   android:text="29"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/seat30"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:layout_marginStart="15dp"
+                   android:text="30"
+                   style="@style/poppins14SemiBoldWhite"
+                   android:background="@drawable/background_button_backgroundcolor"
+                   android:onClick="setSeat"/>
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+   </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnSubmit"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="-60dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/circle_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="@string/selected"
+            style="@style/poppins14SemiBoldGrey" />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/circle_grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="@string/reserved"
+            style="@style/poppins14SemiBoldGrey" />
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/circle_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="@string/available"
+            style="@style/poppins14SemiBoldGrey"/>
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/book_now"
+        android:textAllCaps="true"
+        android:background="@drawable/background_button_primarycolor"
+        style="@style/poppins16SemiBoldWhite" />
+
+
+</RelativeLayout>
