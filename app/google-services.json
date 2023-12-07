@@ -1,0 +1,125 @@
+{
+  "project_info": {
+    "project_number": "574738551533",
+    "firebase_url": "https://hacktiv8-6dc2f-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "hacktiv8-6dc2f",
+    "storage_bucket": "hacktiv8-6dc2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574738551533:android:e1371eeca6334c5242b2e4",
+        "android_client_info": {
+          "package_name": "com.kelompok8.finalproject2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt6o5W7gjJGN-UH1iftNwYcqgNuX-XnqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574738551533:android:86c7fdefce6a97a242b2e4",
+        "android_client_info": {
+          "package_name": "com.uknown.aplicationaddterminal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt6o5W7gjJGN-UH1iftNwYcqgNuX-XnqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574738551533:android:dfee3afdb277629642b2e4",
+        "android_client_info": {
+          "package_name": "com.uknown.examplefirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt6o5W7gjJGN-UH1iftNwYcqgNuX-XnqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574738551533:android:9af03b2561dff3f042b2e4",
+        "android_client_info": {
+          "package_name": "com.uknown.kelompok8_project_akhir_8"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt6o5W7gjJGN-UH1iftNwYcqgNuX-XnqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574738551533:android:f7fccae61faf965f42b2e4",
+        "android_client_info": {
+          "package_name": "com.uknown.projectakhir2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt6o5W7gjJGN-UH1iftNwYcqgNuX-XnqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574738551533:android:46758e494501c93f42b2e4",
+        "android_client_info": {
+          "package_name": "com.uknown.tugasakhir2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt6o5W7gjJGN-UH1iftNwYcqgNuX-XnqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
