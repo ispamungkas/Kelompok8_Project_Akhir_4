@@ -1,0 +1,171 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.uknown.kelompok8_project_akhir_8.homepage.orderpage.payment.detailpayment.DetailCreditCardFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_number"
+                        style="@style/poppins14RegularBlackGrey"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_edittext_primaryoutline"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="10dp">
+
+                        <ImageView
+                            android:id="@+id/image_credit"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/image_visa"/>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/numberidcard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:inputType="number"
+                            android:background="@drawable/background_edittext_clear"
+                            android:hint="@string/bintang"
+                            style="@style/poppins12RegularBlackGrey"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/valid_until"
+                        style="@style/poppins14RegularBlackGrey"
+                        android:layout_marginTop="20dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etmonth"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/month"
+                            android:padding="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:inputType="number"
+                            android:background="@drawable/background_edittext_backgroundcolor"
+                            style="@style/poppins12RegularBlackGrey"/>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etyear"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/year"
+                            android:padding="10dp"
+                            android:layout_marginStart="10dp"
+                            android:inputType="number"
+                            android:background="@drawable/background_edittext_backgroundcolor"
+                            style="@style/poppins12RegularBlackGrey"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_holder"
+                        style="@style/poppins14RegularBlackGrey"
+                        android:layout_marginTop="20dp"/>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/surename"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/surename"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_edittext_backgroundcolor"
+                        style="@style/poppins12RegularBlackGrey"/>
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vcc"
+                        style="@style/poppins14RegularBlackGrey"
+                        android:layout_marginTop="20dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/numbervcc"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/vcc"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/background_edittext_backgroundcolor"
+                            style="@style/poppins12RegularBlackGrey"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/last_three_digit_on_your_card"
+                            style="@style/poppins14RegularGrey"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnverif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/verify_payment"
+                android:layout_marginTop="30dp"
+                style="@style/poppins16SemiBoldWhite"
+                android:background="@drawable/selector_btn"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

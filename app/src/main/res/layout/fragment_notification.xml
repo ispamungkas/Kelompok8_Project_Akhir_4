@@ -1,15 +1,34 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundDisplay"
-    tools:context="com.uknown.kelompok8_project_akhir_4.homepage.NotificationFragment">
+    android:orientation="vertical"
+    tools:context="com.uknown.kelompok8_project_akhir_8.homepage.NotificationFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/backgroundDisplay"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notification"
+            style="@style/poppins16SemiBoldBlack"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvNotification"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_notification"/>
+        tools:listitem="@layout/item_notification"
+        tools:itemCount="5"
+        android:background="@color/backgroundDisplay"
+        android:layout_marginBottom="60dp"/>
 
-</FrameLayout>
+</LinearLayout>

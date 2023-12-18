@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.uknown.kelompok8_project_akhir_4.homepage.HomepageActivity">
+    tools:context="com.uknown.kelompok8_project_akhir_8.homepage.HomepageActivity">
 
     <FrameLayout
         android:id="@+id/frameLayout"

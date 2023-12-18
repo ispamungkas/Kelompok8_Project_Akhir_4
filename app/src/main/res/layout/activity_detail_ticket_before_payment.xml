@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundDisplay"
+    tools:context="com.uknown.kelompok8_project_akhir_8.homepage.detail_tiket.DetailTicketBeforePaymentActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundDisplay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/arrowBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:src="@drawable/icon_arrowback"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.50"
+                android:text="Completed booking"
+                style="@style/poppins16SemiBoldBlack"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="true"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="170dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/appBar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginHorizontal="20dp"
+                app:cardCornerRadius="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/headerTicket"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/primaryColor"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:paddingHorizontal="30dp"
+                            android:paddingVertical="15dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Personal Information"
+                                    style="@style/poppins14Bold"/>
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:paddingHorizontal="30dp"
+                            android:paddingVertical="15dp"
+                            app:layout_constraintTop_toBottomOf="@+id/headerTicket"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/name"
+                                    style="@style/poppins14RegularGrey"/>
+
+                                <TextView
+                                    android:id="@+id/passangerName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/john_doe"
+                                    style="@style/poppins16SemiBoldBlack"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end">
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="5dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/rectangle_rounded_topright_bottomright_primary"
+                            android:layout_marginBottom="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#FAFAFA"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:paddingHorizontal="30dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.25"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/phone_number"
+                                style="@style/poppins14RegularGrey"/>
+
+                            <TextView
+                                android:id="@+id/phoneNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/phone_number_value"
+                                style="@style/poppins14SemiBoldGrey"
+                                android:layout_marginTop="3dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.50"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/seat"
+                                style="@style/poppins14RegularGrey"/>
+
+                            <TextView
+                                android:id="@+id/seatBook"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/_2"
+                                style="@style/poppins14SemiBoldGrey"
+                                android:layout_marginTop="3dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.25"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ticket_status"
+                                style="@style/poppins14RegularGrey"/>
+
+                            <include
+                                android:id="@+id/ticketStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                layout="@layout/success_issued"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/detail2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/cardView1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="5dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rectangle_rounded_topright_bottomright_yellow"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginTop="20dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/detail1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginVertical="15dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginHorizontal="30dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/po_name"
+                                style="@style/poppins14RegularGrey"/>
+
+                            <TextView
+                                android:id="@+id/busName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/bus_name"
+                                style="@style/poppins16SemiBoldBlack"
+                                android:layout_marginTop="5dp"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:paddingHorizontal="30dp"
+                        android:paddingVertical="15dp"
+                        app:layout_constraintTop_toBottomOf="@+id/detail1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.75"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/schedule"
+                                style="@style/poppins14RegularGrey"/>
+
+                            <TextView
+                                android:id="@+id/timeStart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/time"
+                                style="@style/poppins16SemiBoldBlack"/>
+
+                            <ImageView
+                                android:layout_width="3dp"
+                                android:layout_height="65dp"
+                                android:layout_marginVertical="5dp"
+                                android:src="@drawable/line_dot"
+                                android:scaleType="centerCrop"
+                                android:layout_marginStart="15dp"/>
+
+                            <TextView
+                                android:id="@+id/timeEnd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="N/A"
+                                style="@style/poppins16SemiBoldBlack"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.25"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/currentLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/medan"
+                                android:textAllCaps="true"
+                                style="@style/poppins16SemiBoldBlack"
+                                android:layout_marginTop="25dp"/>
+
+                            <TextView
+                                android:id="@+id/currentTerminal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/terminal_amplas"
+                                style="@style/poppins14RegularGrey"/>
+
+                            <TextView
+                                android:id="@+id/startDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/date"
+                                style="@style/poppins14SemiBoldGrey"/>
+
+                            <TextView
+                                android:id="@+id/destinationLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/medan"
+                                android:textAllCaps="true"
+                                style="@style/poppins16SemiBoldBlack"
+                                android:layout_marginTop="25dp"/>
+
+                            <TextView
+                                android:id="@+id/destinationTerminal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/terminal_amplas"
+                                style="@style/poppins14RegularGrey"/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/estimate_time"
+                                style="@style/poppins14RegularGrey"/>
+
+                            <TextView
+                                android:id="@+id/estimateTimeorDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/n_a"
+                                style="@style/poppins16SemiBoldBlack"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/seat_no"
+                                style="@style/poppins14RegularGrey"
+                                android:layout_marginTop="50dp"/>
+
+                            <TextView
+                                android:id="@+id/seatNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/_2_9"
+                                style="@style/poppins16SemiBoldBlack"/>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="20dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/ticket"
+                        style="@style/poppins14RegularGrey"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/totalpassanger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_1"
+                            style="@style/poppins14RegularGrey"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="x"
+                            style="@style/poppins14RegularGrey"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:id="@+id/pricebus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_payment"
+                            style="@style/poppins14RegularGrey"
+                            android:layout_marginEnd="1dp"/>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/unique_code"
+                        style="@style/poppins14RegularGrey"/>
+
+                    <TextView
+                        android:id="@+id/code"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/_3312"
+                        style="@style/poppins14RegularPrimary"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/detail2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:paddingHorizontal="30dp"
+                    android:paddingVertical="15dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:text="@string/total"
+                        style="@style/poppins16SemiBoldGrey"/>
+
+                    <TextView
+                        android:id="@+id/totalPayment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.25"
+                        android:text="@string/total_payment"
+                        android:gravity="end"
+                        style="@style/poppins16SemiBoldGrey"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/selector_btn"
+        android:text="@string/continue_to_payment"
+        style="@style/poppins16SemiBoldWhite"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundDisplay"
-    tools:context="com.uknown.kelompok8_project_akhir_4.homepage.orderpage.DetailOrderActivity">
+    tools:context="com.uknown.kelompok8_project_akhir_8.homepage.orderpage.DetailOrderActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -60,7 +60,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -123,11 +124,12 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSeePicture"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.70"
                         android:textAllCaps="false"
-                        android:background="@drawable/background_button_primarycolor"
+                        android:background="@drawable/selector_btn"
                         android:text="@string/see_picture"
                         style="@style/poppins16SemiBoldWhite"
                         android:layout_marginHorizontal="10dp"/>
@@ -340,6 +342,7 @@
                             android:layout_weight="1" />
 
                         <TextView
+                            android:id="@+id/total"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="end"
@@ -359,7 +362,7 @@
                             android:id="@+id/btnSeat"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/background_button_primarycolor"
+                            android:background="@drawable/selector_btn"
                             android:text="@string/choose_your_seat"
                             android:textAllCaps="false"
                             style="@style/poppins14SemiBoldWhite"
@@ -598,13 +601,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/_2"
-                        style="@style/poppins14RegularGrey"/>
+                        style="@style/poppins14RegularGrey"
+                        android:layout_marginEnd="5dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="x"
-                        style="@style/poppins14RegularGrey"/>
+                        style="@style/poppins14RegularGrey"
+                        android:layout_marginEnd="5dp"/>
 
                     <TextView
                         android:id="@+id/pricePerSeat"
@@ -622,12 +627,6 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/rp"
-                        style="@style/poppins16SemiBoldPrimary"/>
-
-                    <TextView
                         android:id="@+id/priceResult"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -640,10 +639,11 @@
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBook"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/background_button_primarycolor"
+                android:background="@drawable/selector_btn"
                 android:text="@string/book_now"
                 style="@style/poppins14SemiBoldWhite"/>
         </LinearLayout>

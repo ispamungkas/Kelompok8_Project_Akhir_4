@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundDisplay"
-    tools:context="com.uknown.kelompok8_project_akhir_4.homepage.orderpage.ChooseBusActivity"
+    tools:context="com.uknown.kelompok8_project_akhir_8.homepage.orderpage.ChooseBusActivity"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -107,7 +107,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/departune"
+                    android:text="@string/arrival"
                     style="@style/poppins14RegularGrey"/>
 
                 <TextView
