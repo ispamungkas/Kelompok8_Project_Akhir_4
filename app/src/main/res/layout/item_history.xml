@@ -7,6 +7,7 @@
     android:layout_marginBottom="20dp">
 
    <LinearLayout
+       android:id="@+id/container"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:orientation="vertical">
@@ -32,14 +33,6 @@
                    android:layout_height="wrap_content"
                    android:text="@string/date"
                    style="@style/poppins14Bold"/>
-
-               <TextView
-                   android:id="@+id/time"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="@string/time"
-                   style="@style/poppins14Bold"
-                   android:layout_marginStart="5dp"/>
 
            </LinearLayout>
 
@@ -113,7 +106,7 @@
                    style="@style/poppins20SemiBoldBlack"/>
 
                <TextView
-                   android:id="@+id/destination"
+                   android:id="@+id/arrival"
                    android:layout_width="0dp"
                    android:layout_height="wrap_content"
                    android:layout_weight="1"
@@ -126,10 +119,12 @@
                    android:layout_weight="0.2"
                    android:orientation="horizontal">
 
-                    <include
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        layout="@layout/success_paid"/>
+                   <include
+                       android:id="@+id/paid"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       layout="@layout/success_paid"/>
+
 
                </LinearLayout>
            </LinearLayout>

@@ -2,13 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.uknown.kelompok8_project_akhir_4.homepage.HistoryFragment">
+    tools:context="com.uknown.kelompok8_project_akhir_8.homepage.HistoryFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/backgroundDisplay">
+        android:background="@color/backgroundDisplay"
+        android:layout_marginBottom="80dp">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -30,7 +31,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="top|center_horizontal">
+            android:gravity="top|center_horizontal"
+            android:visibility="gone">
             
             <ImageView
                 android:layout_width="match_parent"
