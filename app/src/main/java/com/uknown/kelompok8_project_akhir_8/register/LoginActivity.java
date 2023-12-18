@@ -123,7 +123,7 @@ public class LoginActivity extends AppCompatActivity {
                         saveUserToDatabase(user);
 
                         // Setelah berhasil login, arahkan ke halaman berikutnya
-                        redirectToNextPage(user);
+                        redirectToNextPage(user.getUid());
                     } else {
                         Log.w("GoogleSignIn", "signInWithCredential:failure", task.getException());
                         Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
@@ -149,10 +149,13 @@ public class LoginActivity extends AppCompatActivity {
         ff.collection("users")
                 .document(userId)
                 .get()
-                .addOnFailureListener(new OnFailureListener() {
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
-                    public void onFailure(@NonNull Exception e) {
-                        createDatabaseFirestore(userModel);
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if(!task.getResult().exists()){
+                            createDatabaseFirestore(userModel);
+                            redirectToNextPage(userModel.getUserId());
+                        }
                     }
                 });
     }
@@ -169,9 +172,9 @@ public class LoginActivity extends AppCompatActivity {
                 });
     }
 
-    private void redirectToNextPage(FirebaseUser user) {
+    private void redirectToNextPage(String id) {
         dataUser = new User();
-        ff.collection("users").whereEqualTo("userId", user.getUid()).get()
+        ff.collection("users").whereEqualTo("userId", id).get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
