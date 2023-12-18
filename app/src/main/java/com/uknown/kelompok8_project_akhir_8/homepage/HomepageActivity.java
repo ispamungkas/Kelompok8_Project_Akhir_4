@@ -28,7 +28,22 @@ public class HomepageActivity extends AppCompatActivity {
         arrived = getIntent().getBundleExtra("sendbackArrival");
 
         // Start Fragment
-        transactionFragment(new SearchFragment(), departune, arrived);
+        if(getIntent().hasExtra("success")){
+            transactionFragment(new HistoryFragment(), null, null);
+            binding.bottomNavigationView.setSelectedItemId(R.id.history);
+        } else if(getIntent().hasExtra("history")){
+            transactionFragment(new HistoryFragment(), null, null);
+            binding.bottomNavigationView.setSelectedItemId(R.id.history);
+        } else if(getIntent().hasExtra("notification")){
+            transactionFragment(new NotificationFragment(), null, null);
+            binding.bottomNavigationView.setSelectedItemId(R.id.notification);
+        } else if(getIntent().hasExtra("profile")){
+            transactionFragment(new ProfileFragment(), null, null);
+            binding.bottomNavigationView.setSelectedItemId(R.id.profile);
+        } else {
+            transactionFragment(new SearchFragment(), departune, arrived);
+        }
+
 
         binding.bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -37,7 +52,6 @@ public class HomepageActivity extends AppCompatActivity {
             }
         });
     }
-
 
     private boolean onItemNavigationClicked(MenuItem item){
 

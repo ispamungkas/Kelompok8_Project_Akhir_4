@@ -77,6 +77,7 @@ import java.util.List;
         TicketModel model = modelList.get(adapterPosition);
         Intent go = new Intent(getActivity().getApplicationContext(), DetailTicketActivity.class);
         go.putExtra("model", model);
+        go.putExtra("fromnotification", 1);
         startActivity(go);
         getActivity().finish();
      }

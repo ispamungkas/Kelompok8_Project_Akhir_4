@@ -44,6 +44,7 @@ public class SuccessPaymentActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Intent go = new Intent(getApplicationContext(), HomepageActivity.class);
+                        go.putExtra("success", 1);
                         startActivity(go);
                         finishAffinity();
                     }

@@ -121,6 +121,7 @@ public class HistoryFragment extends Fragment implements HistoryAdapter.OnClickL
 
             Intent go = new Intent(getActivity().getApplicationContext(), DetailTicketActivity.class);
             go.putExtra("model", dataUpdate);
+            go.putExtra("fromhistory", 1);
             startActivity(go);
             getActivity().finish();
         }

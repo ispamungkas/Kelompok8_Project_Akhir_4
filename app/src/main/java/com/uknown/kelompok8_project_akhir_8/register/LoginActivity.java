@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.auth.api.Auth;
@@ -16,16 +17,26 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.uknown.kelompok8_project_akhir_8.homepage.HomepageActivity;
 import com.uknown.kelompok8_project_akhir_8.homepage.model.User;
 import com.uknown.kelompok8_project_akhir_8.R;
 import com.uknown.kelompok8_project_akhir_8.databinding.LoginBinding;
+
+import java.util.List;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -35,12 +46,15 @@ public class LoginActivity extends AppCompatActivity {
     private GoogleApiClient mGoogleApiClient;
     private DatabaseReference mDatabase;
     private LoginBinding binding;
+    private FirebaseFirestore ff;
+    private User dataUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = LoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        ff = FirebaseFirestore.getInstance();
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -107,8 +121,9 @@ public class LoginActivity extends AppCompatActivity {
                         FirebaseUser user = mAuth.getCurrentUser();
                         // Simpan UID pengguna ke database Firebase
                         saveUserToDatabase(user);
+
                         // Setelah berhasil login, arahkan ke halaman berikutnya
-                        redirectToNextPage();
+                        redirectToNextPage(user);
                     } else {
                         Log.w("GoogleSignIn", "signInWithCredential:failure", task.getException());
                         Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
@@ -129,12 +144,54 @@ public class LoginActivity extends AppCompatActivity {
 
         // Simpan objek User ke dalam database Firebase
         mDatabase.child("users").child(userId).setValue(userModel);
+
+        // Simpan objecy User ke dalam database Firebase
+        ff.collection("users")
+                .document(userId)
+                .get()
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        createDatabaseFirestore(userModel);
+                    }
+                });
     }
 
-    private void redirectToNextPage() {
-        // Intent untuk membuka halaman SetupNumberActivity
-        Intent intent = new Intent(this, SetupNumberActivity.class);
-        startActivity(intent);
-        finish();
+    private void createDatabaseFirestore(User userModel) {
+        ff.collection("users")
+                .document(userModel.getUserId())
+                .set(userModel)
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getApplicationContext(), "Add Account Failure", Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+    private void redirectToNextPage(FirebaseUser user) {
+        dataUser = new User();
+        ff.collection("users").whereEqualTo("userId", user.getUid()).get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        List<DocumentSnapshot> data = queryDocumentSnapshots.getDocuments();
+                        for (DocumentSnapshot ds : data){
+                            dataUser = ds.toObject(User.class);
+
+                            Intent intent = null;
+                            // Intent untuk membuka halaman SetupNumberActivity
+                            if(!dataUser.getPhoneNumber().isEmpty()){
+                                intent = new Intent(getApplicationContext(), HomepageActivity.class);
+                            } else {
+                                intent = new Intent(getApplicationContext(), SetupNumberActivity.class);
+                            }
+                            startActivity(intent);
+                            finish();
+                        }
+                    }
+                });
+
+
     }
 }

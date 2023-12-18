@@ -65,6 +65,11 @@ public class DetailTicketActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent go = new Intent(getApplicationContext(), HomepageActivity.class);
+                if(getIntent().hasExtra("fromhistory")){
+                    go.putExtra("history", 1);
+                } else if(getIntent().hasExtra("fromnotification")){
+                    go.putExtra("notification",1);
+                }
                 startActivity(go);
                 finish();
             }
@@ -76,6 +81,11 @@ public class DetailTicketActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         Intent go = new Intent(getApplicationContext(), HomepageActivity.class);
+        if(getIntent().hasExtra("fromhistory")){
+            go.putExtra("history", 1);
+        } else if(getIntent().hasExtra("fromnotification")){
+            go.putExtra("notification",1);
+        }
         startActivity(go);
         finish();
     }

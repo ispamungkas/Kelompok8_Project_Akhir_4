@@ -21,7 +21,8 @@ public class AboutActivity extends AppCompatActivity {
         binding.arrowBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent go = new Intent(getApplicationContext(), HomepageActivity.class);
+                Intent go = new Intent(getApplicationContext(), HomepageActivity.class);        go.putExtra("profile", 1);
+                go.putExtra("profile", 1);
                 startActivity(go);
                 finish();
             }
@@ -32,6 +33,7 @@ public class AboutActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         Intent go = new Intent(getApplicationContext(), HomepageActivity.class);
+        go.putExtra("profile", 1);
         startActivity(go);
         finish();
     }
